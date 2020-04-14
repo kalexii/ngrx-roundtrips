@@ -1,7 +1,7 @@
 {
   "name": "ngrx-roundtrips",
   "description": "A quality of life improvement library for people who like Redux pattern, but don't like it's verbosity.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "kalexi",
   "maintainers": [
     {
