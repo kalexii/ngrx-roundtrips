@@ -3,7 +3,14 @@ import {Loadable, toLoading} from "./loadable";
 import {Actions, ofType} from "@ngrx/effects";
 import {Observable, of, zip} from "rxjs";
 import {catchError, concatMap, map, switchMap} from "rxjs/operators";
-import {ActionDefinition, AsyncCall, errorSuffix, HasArguments, HasArgumentsAndError, successSuffix} from "./core";
+import {
+  ActionDefinition,
+  AsyncQuery,
+  errorSuffix,
+  HasArguments,
+  HasArgumentsAndError,
+  successSuffix
+} from "./core";
 import {QueryRoundtripReducers} from "./queries";
 
 export interface ActionRoundtrip<TArguments> {
@@ -33,7 +40,7 @@ export function createImpactLoadingStatusReducers<TResult extends any>({request,
 export function createActionRoundtripEffect<TArguments, TAdditional>(
   actions$: Actions<Action>,
   saga: ActionRoundtrip<TArguments>,
-  request: AsyncCall<TArguments & { additional?: TAdditional }>,
+  request: AsyncQuery<TArguments & { additional?: TAdditional }, void>,
   withAdditional?: Observable<TAdditional>
 ): Observable<Action> {
   return actions$.pipe(
