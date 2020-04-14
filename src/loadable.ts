@@ -1,6 +1,6 @@
 export enum LoadableStatus {
-  Empty = 'empty',
-  HasData = 'hasData'
+  Empty = "empty",
+  HasData = "hasData"
 }
 
 interface RemoteValue {
@@ -21,11 +21,11 @@ export interface HasData<T> extends RemoteValue {
 export type Loadable<T> = Readonly<Empty> | Readonly<HasData<T>>;
 
 export function toLoading<T>(loadable: Loadable<T>, isLoading: boolean = true): Loadable<T> {
-  return {...loadable, isLoading};
+  return { ...loadable, isLoading };
 }
 
 export function toData<T>(data: T): Loadable<T> {
-  return {data, isLoading: false, status: LoadableStatus.HasData};
+  return { data, isLoading: false, status: LoadableStatus.HasData };
 }
 
 export const emptyLoadable: Loadable<undefined> = {
