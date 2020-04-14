@@ -12,10 +12,10 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
-    "@angular/core": "^8.0.0",
-    "@angular/common": "^8.0.0",
-    "@ngrx/effects": "^8.0.0",
-    "@ngrx/store": "^8.0.0",
+    "@angular/core": "^9.0.0",
+    "@angular/common": "^9.0.0",
+    "@ngrx/effects": "^9.0.0",
+    "@ngrx/store": "^9.0.0",
     "rxjs": "^6.4.0",
     "zone.js": "^0.9.1"
   },
@@ -24,7 +24,7 @@
     "@types/jest": "^24.0.22",
     "@types/node": "^10.14.22",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.0.0",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.5.3"
