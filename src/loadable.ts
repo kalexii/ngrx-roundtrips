@@ -1,4 +1,4 @@
-export enum LoadableStatus {
+export const enum LoadableStatus {
   Empty = "empty",
   HasData = "hasData"
 }

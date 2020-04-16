@@ -1,6 +1,5 @@
 import { Loadable, toData, toLoading } from "./loadable";
 import { Action, createAction, on, props } from "@ngrx/store";
-import { ActionRoundtrip } from "./actions";
 import { Actions, ofType } from "@ngrx/effects";
 import { Observable, of, zip } from "rxjs";
 import { catchError, map, mergeMap, switchMap } from "rxjs/operators";
@@ -30,9 +29,10 @@ export function createQueryRoundtripReducers<TResult>({
   ] as const;
 }
 
-// @ts-ignore
-export interface QueryRoundtrip<TArguments, TResult> extends ActionRoundtrip<TArguments> {
+export interface QueryRoundtrip<TArguments, TResult> {
+  readonly request: ActionDefinition<HasArguments<TArguments>>;
   readonly success: ActionDefinition<HasArgumentsAndResult<TArguments, TResult>>;
+  readonly error: ActionDefinition<HasArgumentsAndError<TArguments>>;
 }
 
 export function createQueryRoundtrip<TArguments, TResult>(type: string): QueryRoundtrip<TArguments, TResult> {

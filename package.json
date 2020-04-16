@@ -1,14 +1,17 @@
 {
   "name": "ngrx-roundtrips",
   "description": "A quality of life improvement library for people who like Redux pattern, but don't like it's verbosity.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "kalexi",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "maintainers": [
     {
       "name": "Kuzmenko Oleksandr"
     }
   ],
   "scripts": {
+    "prepublish": "tsc",
     "test": "jest --watchAll"
   },
   "dependencies": {
@@ -39,6 +42,5 @@
     "remote actions",
     "loadable"
   ],
-  "license": "Apache-2.0",
-  "main": "index.js"
+  "license": "Apache-2.0"
 }
