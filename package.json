@@ -1,7 +1,7 @@
 {
   "name": "ngrx-roundtrips",
   "description": "A quality of life improvement library for people who like Redux pattern, but don't like it's verbosity.",
-  "version": "0.0.3",
+  "version": "10.0.0",
   "author": "kalexi",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,14 +11,14 @@
     }
   ],
   "scripts": {
-    "prepublish": "tsc",
+    "prepublish": "tsc --build",
     "test": "jest --watchAll"
   },
   "dependencies": {
-    "@angular/core": "^9.0.0",
-    "@angular/common": "^9.0.0",
-    "@ngrx/effects": "^9.0.0",
-    "@ngrx/store": "^9.0.0",
+    "@angular/core": "^10.0.0",
+    "@angular/common": "^10.0.0",
+    "@ngrx/effects": "^10.0.0",
+    "@ngrx/store": "^10.0.0",
     "rxjs": "^6.4.0",
     "zone.js": "^0.9.1"
   },
